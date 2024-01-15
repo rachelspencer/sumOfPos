@@ -7,18 +7,23 @@
 
 // USING FILTER METHOD
 
-const sumOfPos = (arr) => {
-    let arrOfPos = arr.filter((num) => num > 0);
-    let sumOfPos = [];
-    
-    if (arrOfPos.length){
-        sumOfPos = arrOfPos.reduce((accumulator, currentValue) => accumulator + currentValue);
-    } else {
-        return 0;
-    }
 
-    return sumOfPos;
-};
+// const sumOfPos = (arr) => {
+//     let arrOfPos = arr.filter((num) => num > 0);
+//     let sum = 0;
+    
+//     if (arrOfPos.length){
+//         sum = arrOfPos.reduce((accumulator, currentValue) => accumulator + currentValue);
+//     } else {
+//         return 0;
+//     }
+
+//     return sum;
+// };
+
+// One-line-ah
+
+ const sumOfPos = (arr) => arr.filter((num) => num > 0).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
 
 console.log("ans 15", sumOfPos([1,2,3,4,5])); //15
 console.log("ans 13", sumOfPos([1,-2,3,4,5])); //13
